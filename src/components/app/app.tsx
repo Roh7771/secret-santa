@@ -12,7 +12,7 @@ const App: React.FunctionComponent<Props> = () => {
   const [personList, setPersonList] = React.useState<PersonType[]>([]);
   const [resultList, setResultList] = React.useState<PersonType[]>([]);
   const [appStatus, setAppStatus] = React.useState<AppStatus>(
-    AppStatus.EDITING,
+    AppStatus.LOADING,
   );
 
   const handleAddButtonClick = (newPerson: PersonType) => {

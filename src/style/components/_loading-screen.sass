@@ -1,0 +1,52 @@
+@keyframes loading 
+  0% 
+    width: 0%
+  100% 
+    width: 100%
+
+@keyframes sentence-scroll
+  0%
+    transform: translateX(100%)
+  5%
+    transform: translateX(0%)
+  20%  
+    transform: translateX(0%)
+  25%
+    transform: translateX(-100%)
+  40%
+    transform: translateX(-100%)
+  45%
+    transform: translateX(-200%)
+  60%
+    transform: translateX(-200%)
+  65%
+    transform: translateX(-300%)
+  80%
+    transform: translateX(-300%)
+  85%
+    transform: translateX(-400%)
+  100%
+    transform: translateX(-400%)
+    
+  
+.loading-screen
+  width: 400px
+  overflow: hidden
+  &__outer-bar
+    width: 100%
+    height: 10px
+    border: 1px solid black
+  &__inner-bar
+    height: 8px
+    width: 100%
+    animation: loading 13s
+    background-color: blue
+  &__sentences-container
+    height: 200px
+    position: relative
+    animation: sentence-scroll 13s
+    transform: translateX(100%)
+  &__sentence
+    text-align: center
+    width: 100%
+    height: 100%
