@@ -3,6 +3,7 @@ import { AppStatus } from '../../constants';
 import { PersonType } from '../../general-types';
 import distributeNames from '../../utils/distributeNames';
 import EditScreen from '../edit-screen/edit-screen';
+import LoadingScreen from '../loading-screen/loading-screen';
 import ResultScreen from '../result-screen/result-screen';
 
 type Props = {};
@@ -27,8 +28,14 @@ const App: React.FunctionComponent<Props> = () => {
     });
   };
 
-  const handleDistributeButtonClick = () => {
-    const result = distributeNames(personList);
+  const handleDistributeButtonClick = async() => {
+    setAppStatus(AppStatus.LOADING);
+    const result = await new Promise<PersonType[]>(resolve => {
+      const distributedList = distributeNames(personList);
+      setTimeout(() => {
+        resolve(distributedList);
+      }, 5000);
+    });
     setResultList(result);
     setAppStatus(AppStatus.DISTRIBUTED);
   };
@@ -53,14 +60,16 @@ const App: React.FunctionComponent<Props> = () => {
 
     case AppStatus.DISTRIBUTED:
       mainContent = (
-        <div>
-          <ResultScreen
-            personList={resultList}
-            handleDistributeButtonClick={handleDistributeButtonClick}
-            handleEditListButtonClick={handleEditListButtonClick}
-          />
-        </div>
+        <ResultScreen
+          personList={resultList}
+          handleDistributeButtonClick={handleDistributeButtonClick}
+          handleEditListButtonClick={handleEditListButtonClick}
+        />
       );
+      break;
+
+    case AppStatus.LOADING:
+      mainContent = <LoadingScreen />;
       break;
 
     default:
