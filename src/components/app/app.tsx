@@ -34,7 +34,7 @@ const App: React.FunctionComponent<Props> = () => {
       const distributedList = distributeNames(personList);
       setTimeout(() => {
         resolve(distributedList);
-      }, 5000);
+      }, 13000);
     });
     setResultList(result);
     setAppStatus(AppStatus.DISTRIBUTED);
