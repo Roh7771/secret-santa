@@ -1,5 +1,6 @@
 import React from 'react';
 import { PersonType } from '../../general-types';
+import { Description } from './components/description';
 import { Form } from './components/form';
 import { GenerateButton } from './components/genetate-button';
 import { InitialList } from './components/initial-list';
@@ -18,6 +19,8 @@ export const EditScreen: React.FunctionComponent<EditScreenPropsType> = ({
   handleDistributeButtonClick,
 }: EditScreenPropsType) => (
   <section>
+    <Description />
+
     <InitialList
       handleDeleteButtonClick={handleDeleteButtonClick}
       personList={personList}
