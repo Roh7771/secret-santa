@@ -1,5 +1,5 @@
 import React from 'react';
-import { AppStatus } from '../../constants';
+import { AppStatus, InitialPersonList } from '../../constants';
 import { PersonType } from '../../general-types';
 import distributeNames from '../../utils/distributeNames';
 import { EditScreen } from '../edit-screen/edit-screen';
@@ -9,10 +9,10 @@ import ResultScreen from '../result-screen/result-screen';
 type Props = {};
 
 const App: React.FunctionComponent<Props> = () => {
-  const [personList, setPersonList] = React.useState<PersonType[]>([]);
+  const [personList, setPersonList] = React.useState<PersonType[]>(InitialPersonList);
   const [resultList, setResultList] = React.useState<PersonType[]>([]);
   const [appStatus, setAppStatus] = React.useState<AppStatus>(
-    AppStatus.LOADING,
+    AppStatus.EDITING,
   );
 
   const handleAddButtonClick = (newPerson: PersonType) => {
@@ -34,7 +34,7 @@ const App: React.FunctionComponent<Props> = () => {
       const distributedList = distributeNames(personList);
       setTimeout(() => {
         resolve(distributedList);
-      }, 13000);
+      }, 500);
     });
     setResultList(result);
     setAppStatus(AppStatus.DISTRIBUTED);
