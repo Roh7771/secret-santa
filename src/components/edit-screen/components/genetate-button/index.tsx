@@ -5,7 +5,7 @@ type GenerateButtonPropsType = {
   onDistributeButtonClick: () => void;
 };
 
-const GenerateButton: React.FunctionComponent<GenerateButtonPropsType> = ({
+export const GenerateButton: React.FunctionComponent<GenerateButtonPropsType> = ({
   isDisabled,
   onDistributeButtonClick,
 }: GenerateButtonPropsType) => (
@@ -13,5 +13,3 @@ const GenerateButton: React.FunctionComponent<GenerateButtonPropsType> = ({
     Распределить
   </button>
 );
-
-export default GenerateButton;

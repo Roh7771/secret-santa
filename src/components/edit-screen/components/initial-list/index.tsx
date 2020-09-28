@@ -1,13 +1,13 @@
 import React from 'react';
-import { PersonType } from '../../general-types';
-import InitialItem from '../initial-item/initial-item';
+import { PersonType } from '../../../../general-types';
+import { InitialItem } from './components/initial-item';
 
 type InitialListPropsType = {
   personList: PersonType[];
   handleDeleteButtonClick: (personNameToDelete: string) => void;
 };
 
-const InitialList: React.FunctionComponent<InitialListPropsType> = ({
+export const InitialList: React.FunctionComponent<InitialListPropsType> = ({
   personList,
   handleDeleteButtonClick,
 }: InitialListPropsType) => (
@@ -21,5 +21,3 @@ const InitialList: React.FunctionComponent<InitialListPropsType> = ({
     ))}
   </section>
 );
-
-export default InitialList;

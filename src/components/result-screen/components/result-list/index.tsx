@@ -1,12 +1,12 @@
 import React from 'react';
-import { PersonType } from '../../general-types';
-import ResultItem from '../result-item/result-item';
+import { PersonType } from '../../../../general-types';
+import { ResultItem } from './components/result-item';
 
 type ResultListPropsType = {
   personList: PersonType[];
 };
 
-const ResultList: React.FunctionComponent<ResultListPropsType> = ({
+export const ResultList: React.FunctionComponent<ResultListPropsType> = ({
   personList,
 }: ResultListPropsType) => (
   <section>
@@ -15,5 +15,3 @@ const ResultList: React.FunctionComponent<ResultListPropsType> = ({
     ))}
   </section>
 );
-
-export default ResultList;

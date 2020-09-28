@@ -5,7 +5,7 @@ type InitialItemPropsType = {
   onDeleteButtonClick: (personNameToDelete: string) => void;
 };
 
-const InitialItem: React.FunctionComponent<InitialItemPropsType> = ({
+export const InitialItem: React.FunctionComponent<InitialItemPropsType> = ({
   name,
   onDeleteButtonClick,
 }: InitialItemPropsType) => (
@@ -21,5 +21,3 @@ const InitialItem: React.FunctionComponent<InitialItemPropsType> = ({
     </button>
   </div>
 );
-
-export default InitialItem;

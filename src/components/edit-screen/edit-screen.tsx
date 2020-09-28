@@ -1,8 +1,8 @@
 import React from 'react';
 import { PersonType } from '../../general-types';
-import Form from '../form/form';
-import GenerateButton from '../generate-button/generate-button';
-import InitialList from '../initial-list/initial-list';
+import { Form } from './components/form';
+import { GenerateButton } from './components/genetate-button';
+import { InitialList } from './components/initial-list';
 
 type EditScreenPropsType = {
   personList: PersonType[];
@@ -11,7 +11,7 @@ type EditScreenPropsType = {
   handleDistributeButtonClick: () => void;
 };
 
-const EditScreen: React.FunctionComponent<EditScreenPropsType> = ({
+export const EditScreen: React.FunctionComponent<EditScreenPropsType> = ({
   personList,
   handleAddButtonClick,
   handleDeleteButtonClick,
@@ -31,5 +31,3 @@ const EditScreen: React.FunctionComponent<EditScreenPropsType> = ({
     />
   </section>
 );
-
-export default EditScreen;

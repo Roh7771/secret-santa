@@ -2,7 +2,7 @@ import React from 'react';
 import { AppStatus } from '../../constants';
 import { PersonType } from '../../general-types';
 import distributeNames from '../../utils/distributeNames';
-import EditScreen from '../edit-screen/edit-screen';
+import { EditScreen } from '../edit-screen/edit-screen';
 import LoadingScreen from '../loading-screen/loading-screen';
 import ResultScreen from '../result-screen/result-screen';
 

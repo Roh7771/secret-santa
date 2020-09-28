@@ -1,11 +1,11 @@
 import React from 'react';
-import { PersonType } from '../../general-types';
+import { PersonType } from '../../../../general-types';
 
 type FormPropsType = {
   onAddButtonCLick: (person: PersonType) => void;
 };
 
-const Form: React.FunctionComponent<FormPropsType> = ({
+export const Form: React.FunctionComponent<FormPropsType> = ({
   onAddButtonCLick,
 }: FormPropsType) => {
   const inputRef = React.useRef<HTMLInputElement>(null);
@@ -31,5 +31,3 @@ const Form: React.FunctionComponent<FormPropsType> = ({
     </form>
   );
 };
-
-export default Form;

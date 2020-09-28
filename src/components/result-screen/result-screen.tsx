@@ -1,6 +1,6 @@
 import React from 'react';
 import { PersonType } from '../../general-types';
-import ResultList from '../result-list/result-list';
+import { ResultList } from './components/result-list';
 
 type ResultScreenPropsType = {
   personList: PersonType[];

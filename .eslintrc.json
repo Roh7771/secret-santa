@@ -20,6 +20,7 @@
       }
     }],
     "no-use-before-define": "off",
+    "import/prefer-default-export": "off",
     "@typescript-eslint/no-use-before-define": ["error"],
     "max-len": ["error", { "code": 125 }],
     "jsx-a11y/control-has-associated-label": 0,
