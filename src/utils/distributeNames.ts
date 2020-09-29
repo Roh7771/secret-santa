@@ -1,5 +1,5 @@
 /* eslint-disable no-loop-func */
-import { PersonType } from '../general-types';
+import { PersonType } from '../types/general-types';
 import getRandomInt from './getRandomInt';
 import updatePersonStatus from './updatePersonStatus';
 

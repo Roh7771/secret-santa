@@ -1,4 +1,4 @@
-import { PersonType } from './general-types';
+import { PersonType } from './types/general-types';
 
 export enum AppStatus {
   DISTRIBUTED,

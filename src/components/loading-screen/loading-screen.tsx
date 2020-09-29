@@ -1,6 +1,6 @@
 import React from 'react';
 
-const LoadingScreen: React.FC<{}> = () => (
+export const LoadingScreen: React.FC<{}> = () => (
   <section className="loading-screen">
     <div className="loading-screen__sentences-container">
       <div className="loading-screen__sentence">Some text 1</div>
@@ -34,5 +34,3 @@ const LoadingScreen: React.FC<{}> = () => (
     </div>
   </section>
 );
-
-export default LoadingScreen;

@@ -1,15 +1,17 @@
 import React from 'react';
 import { AppStatus, InitialPersonList } from '../../constants';
-import { PersonType } from '../../general-types';
+import { PersonType } from '../../types/general-types';
 import distributeNames from '../../utils/distributeNames';
-import { EditScreen } from '../edit-screen/edit-screen';
-import LoadingScreen from '../loading-screen/loading-screen';
-import ResultScreen from '../result-screen/result-screen';
+import { EditScreen } from '../edit-screen';
+import { LoadingScreen } from '../loading-screen';
+import { ResultScreen } from '../result-screen/result-screen';
 
 type Props = {};
 
-const App: React.FunctionComponent<Props> = () => {
-  const [personList, setPersonList] = React.useState<PersonType[]>(InitialPersonList);
+export const App: React.FunctionComponent<Props> = () => {
+  const [personList, setPersonList] = React.useState<PersonType[]>(
+    InitialPersonList,
+  );
   const [resultList, setResultList] = React.useState<PersonType[]>([]);
   const [appStatus, setAppStatus] = React.useState<AppStatus>(
     AppStatus.EDITING,
@@ -79,5 +81,3 @@ const App: React.FunctionComponent<Props> = () => {
 
   return mainContent;
 };
-
-export default App;

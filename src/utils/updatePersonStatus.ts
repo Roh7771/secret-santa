@@ -1,4 +1,4 @@
-import { PersonType } from '../general-types';
+import { PersonType } from '../types/general-types';
 
 /* eslint-disable no-param-reassign */
 

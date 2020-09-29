@@ -1,5 +1,5 @@
 import React from 'react';
-import { PersonType } from '../../general-types';
+import { PersonType } from '../../types/general-types';
 import { ResultList } from './components/result-list';
 
 type ResultScreenPropsType = {
@@ -8,7 +8,7 @@ type ResultScreenPropsType = {
   handleEditListButtonClick: () => void;
 };
 
-const ResultScreen: React.FunctionComponent<ResultScreenPropsType> = ({
+export const ResultScreen: React.FunctionComponent<ResultScreenPropsType> = ({
   personList,
   handleDistributeButtonClick,
   handleEditListButtonClick,
@@ -23,5 +23,3 @@ const ResultScreen: React.FunctionComponent<ResultScreenPropsType> = ({
     </button>
   </section>
 );
-
-export default ResultScreen;

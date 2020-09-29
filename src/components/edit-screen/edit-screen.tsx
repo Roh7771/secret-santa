@@ -1,9 +1,8 @@
 import React from 'react';
-import { PersonType } from '../../general-types';
-import { Description } from './components/description';
-import { Form } from './components/form';
-import { GenerateButton } from './components/genetate-button';
-import { InitialList } from './components/initial-list';
+import { PersonType } from '../../types/general-types';
+import {
+  Description, Form, GenerateButton, InitialList,
+} from './components';
 
 type EditScreenPropsType = {
   personList: PersonType[];
