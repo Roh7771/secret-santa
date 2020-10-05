@@ -1,5 +1,5 @@
+import { PersonType } from '@/types/general-types';
 import React from 'react';
-import { PersonType } from '../../../../types/general-types';
 import { InitialItem } from './components';
 
 type InitialListPropsType = {

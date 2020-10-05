@@ -1,10 +1,10 @@
+import { AppStatus, InitialPersonList } from '@/constants';
+import { PersonType } from '@/types/general-types';
+import distributeNames from '@/utils/distributeNames';
 import React from 'react';
-import { AppStatus, InitialPersonList } from '../../constants';
-import { PersonType } from '../../types/general-types';
-import distributeNames from '../../utils/distributeNames';
-import { EditScreen } from '../edit-screen';
-import { LoadingScreen } from '../loading-screen';
-import { ResultScreen } from '../result-screen/result-screen';
+import { ResultScreen } from 'components/result-screen';
+import { LoadingScreen } from 'components/loading-screen';
+import { EditScreen } from 'components/edit-screen';
 
 type Props = {};
 
