@@ -20,6 +20,8 @@
       }
     }],
     "no-use-before-define": "off",
+    "no-shadow": "off",
+    "@typescript-eslint/no-shadow": "error",
     "import/prefer-default-export": "off",
     "@typescript-eslint/no-use-before-define": ["error"],
     "max-len": ["error", { "code": 125 }],
