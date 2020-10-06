@@ -4,6 +4,7 @@ import './style/main.sass';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Global, css } from '@emotion/core';
+import bgImg from '@/img/bg.jpg';
 import { App } from './components';
 
 ReactDOM.render(
@@ -347,6 +348,13 @@ ReactDOM.render(
 
         [hidden] {
           display: none !important;
+        }
+      `}
+    />
+    <Global
+      styles={css`
+        body {
+          background-image: url(${bgImg});
         }
       `}
     />
