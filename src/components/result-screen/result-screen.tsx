@@ -14,7 +14,7 @@ const ResultScreenWrapper = styled('section')`
   margin: 20px 0;
   h1 {
     text-align: center;
-    font-size: 30px;
+    font-size: 32px;
     width: 70%;
     margin: 0 auto 20px auto;
   }
@@ -26,7 +26,13 @@ const ResultScreenWrapper = styled('section')`
     padding: 20px;
     font-size: 22px;
     line-height: 24px;
-    margin-bottom: 30px;
+    margin: 0px 10px 30px 10px;
+  }
+
+  .btn-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
   }
 `;
 
@@ -38,19 +44,21 @@ export const ResultScreen: React.FunctionComponent<ResultScreenPropsType> = ({
   <ResultScreenWrapper>
     <h1>Результаты:</h1>
     <ResultList personList={personList} />
-    <button
-      className="distribute-btn"
-      onClick={() => handleDistributeButtonClick()}
-      type="button"
-    >
-      Распределить еще разок
-    </button>
-    <button
-      className="edit-btn"
-      onClick={() => handleEditListButtonClick()}
-      type="button"
-    >
-      Отредактировать список
-    </button>
+    <div className="btn-container">
+      <button
+        className="distribute-btn"
+        onClick={() => handleDistributeButtonClick()}
+        type="button"
+      >
+        Распределить еще разок
+      </button>
+      <button
+        className="edit-btn"
+        onClick={() => handleEditListButtonClick()}
+        type="button"
+      >
+        Отредактировать список
+      </button>
+    </div>
   </ResultScreenWrapper>
 );

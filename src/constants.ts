@@ -9,7 +9,7 @@ export enum AppStatus {
 export const LOADING_TIME = 13000;
 
 export const CSSVariable = {
-  BUTTON_COLOR: '#cccccc',
+  BUTTON_COLOR: '#FF9140',
 };
 
 export const INITIAL_PERSON_LIST: PersonType[] = [

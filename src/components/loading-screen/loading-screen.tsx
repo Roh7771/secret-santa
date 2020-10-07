@@ -96,7 +96,7 @@ const LoadingScreenWrapper = styled('section')`
     border-radius: 60px;
   }
   .sentences-container {
-    height: 40%;
+    height: 25%;
     width: 100%;
     position: relative;
     animation: ${sentenceScroll} 13s linear;
@@ -110,7 +110,6 @@ const LoadingScreenWrapper = styled('section')`
     padding: 0 10px;
     display: flex;
     justify-content: center;
-    align-items: center;
     font-weight: bold;
     font-size: 26px;
   }

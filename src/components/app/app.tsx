@@ -35,7 +35,7 @@ export const App: React.FunctionComponent<Props> = () => {
       from: 'Egor',
       name: 'Alsu',
       status: 2,
-      to: 'Vladimir',
+      to: 'Vladimir alexandrovich',
     },
   ]);
   const [appStatus, setAppStatus] = React.useState<AppStatus>(

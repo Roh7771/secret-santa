@@ -18,7 +18,7 @@ const FormWrapper = styled('form')`
     margin-right: 10px;
     width: 75%;
     border-radius: 10px;
-    border: 1px gray solid;
+    border: 1px ${CSSVariable.BUTTON_COLOR} solid;
     padding: 7px 15px
   }
 

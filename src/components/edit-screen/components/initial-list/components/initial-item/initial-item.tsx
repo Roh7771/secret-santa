@@ -1,3 +1,4 @@
+import { CSSVariable } from '@/constants';
 import styled from '@emotion/styled';
 import React from 'react';
 
@@ -7,7 +8,7 @@ type InitialItemPropsType = {
 };
 
 const InitialItemWrapper = styled('div')`
-  background-color: #cccccc;
+  background-color: ${CSSVariable.BUTTON_COLOR};
   padding: 10px 40px 10px 15px;
   border-radius: 20px;
   position: relative;
@@ -34,7 +35,7 @@ export const InitialItem: React.FunctionComponent<InitialItemPropsType> = ({
   onDeleteButtonClick,
 }: InitialItemPropsType) => (
   <InitialItemWrapper>
-    <span>{name}</span>
+    {name}
     <button
       onClick={() => {
         onDeleteButtonClick(name);
