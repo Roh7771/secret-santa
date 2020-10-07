@@ -6,7 +6,13 @@ export enum AppStatus {
   EDITING,
 }
 
-export const InitialPersonList: PersonType[] = [
+export const LOADING_TIME = 13000;
+
+export const CSSVariable = {
+  BUTTON_COLOR: '#cccccc',
+};
+
+export const INITIAL_PERSON_LIST: PersonType[] = [
   {
     name: 'Егор',
     to: null,
@@ -67,4 +73,12 @@ export const InitialPersonList: PersonType[] = [
     from: null,
     status: 0,
   },
+];
+
+export const SENTENCES_LIST: string[] = [
+  'Соотносим характеры людей',
+  'Соотносим характеры людей',
+  'Соотносим характеры людей',
+  'Соотносим характеры людей',
+  'Соотносим характеры людей',
 ];

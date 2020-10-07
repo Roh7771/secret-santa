@@ -3,9 +3,13 @@ import styled from '@emotion/styled';
 import santaImg from '@/img/santa.png';
 
 const DescriptionWrapper = styled('section')`
+  margin: 20px 0;
+
   h1 {
     text-align: center;
     font-size: 30px;
+    width: 70%;
+    margin: 0 auto 20px auto;
   }
 
   ol {
@@ -13,10 +17,12 @@ const DescriptionWrapper = styled('section')`
     position: relative;
     left: 50%;
     transform: translateX(-50%);
+    font-size: 30px;
+    margin-bottom: 30px;
   }
 
   img {
-    width: 50%;
+    width: 30%;
     display: block;
     margin: 0 auto;
   }

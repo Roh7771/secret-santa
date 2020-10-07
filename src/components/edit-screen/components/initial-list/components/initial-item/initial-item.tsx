@@ -7,19 +7,25 @@ type InitialItemPropsType = {
 };
 
 const InitialItemWrapper = styled('div')`
-  background-color: silver;
-  padding: 10px 15px;
-  border-radius: 10px;
+  background-color: #cccccc;
+  padding: 10px 40px 10px 15px;
+  border-radius: 20px;
   position: relative;
+  margin: 5px 5px;
 
   button {
     position: absolute;
-    background-color: inherit;
+    background-color: transparent;
     border: none;
-    font-size: 30px;
+    font-size: 25px;
     top: 0px;
     right: 5px;
-    line-height: 40px
+    line-height: 40px;
+    cursor: default !important;
+  }
+  
+  span {
+    cursor: pointer;
   }
 `;
 
@@ -35,7 +41,7 @@ export const InitialItem: React.FunctionComponent<InitialItemPropsType> = ({
       }}
       type="button"
     >
-      &#215;
+      <span>&#215;</span>
     </button>
   </InitialItemWrapper>
 );

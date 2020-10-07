@@ -1,4 +1,4 @@
-import { AppStatus, InitialPersonList } from '@/constants';
+import { AppStatus, INITIAL_PERSON_LIST, LOADING_TIME } from '@/constants';
 import { PersonType } from '@/types/general-types';
 import distributeNames from '@/utils/distributeNames';
 import React from 'react';
@@ -10,11 +10,36 @@ type Props = {};
 
 export const App: React.FunctionComponent<Props> = () => {
   const [personList, setPersonList] = React.useState<PersonType[]>(
-    InitialPersonList,
+    INITIAL_PERSON_LIST,
   );
-  const [resultList, setResultList] = React.useState<PersonType[]>([]);
+  const [resultList, setResultList] = React.useState<PersonType[]>([
+    {
+      from: 'Egor',
+      name: 'Alsu',
+      status: 2,
+      to: 'Vladimir',
+    },
+    {
+      from: 'Egor',
+      name: 'Alsu',
+      status: 2,
+      to: 'Vladimir',
+    },
+    {
+      from: 'Egor',
+      name: 'Alsu',
+      status: 2,
+      to: 'Vladimir',
+    },
+    {
+      from: 'Egor',
+      name: 'Alsu',
+      status: 2,
+      to: 'Vladimir',
+    },
+  ]);
   const [appStatus, setAppStatus] = React.useState<AppStatus>(
-    AppStatus.EDITING,
+    AppStatus.DISTRIBUTED,
   );
 
   const handleAddButtonClick = (newPerson: PersonType) => {
@@ -36,7 +61,7 @@ export const App: React.FunctionComponent<Props> = () => {
       const distributedList = distributeNames(personList);
       setTimeout(() => {
         resolve(distributedList);
-      }, 500);
+      }, LOADING_TIME);
     });
     setResultList(result);
     setAppStatus(AppStatus.DISTRIBUTED);
